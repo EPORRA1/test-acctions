@@ -55,15 +55,15 @@ jobs:
           # operation_name: # optional
       - name: Labeler
         uses: actions/labeler@v3
-          with:
-          # The GITHUB_TOKEN secret
-            repo-token: "${{ secrets.GITHUB_TOKEN }}" # optional
-          # The path for the label configurations
-          # configuration-path: # optional, default is .github/labeler.yml
-          # Whether or not to remove labels when matching files are reverted
-          # sync-labels: # optional
-          # wether to fail upon error HTML responses (e.g. 400, 500)
-          # fail_fast: # optional
-          # wether to print info-level statements or not
-          # verbose: # optional
+        # with:
+        # The GITHUB_TOKEN secret
+        # repo-token: "${{ secrets.GITHUB_TOKEN }}" # optional
+        # The path for the label configurations
+        # configuration-path: # optional, default is .github/labeler.yml
+        # Whether or not to remove labels when matching files are reverted
+        # sync-labels: # optional
+        # wether to fail upon error HTML responses (e.g. 400, 500)
+        # fail_fast: # optional
+        # wether to print info-level statements or not
+        # verbose: # optional
 
