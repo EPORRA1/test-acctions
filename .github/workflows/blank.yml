@@ -23,6 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Run Checkout
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
@@ -34,7 +35,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: HTTP client
+      - name: Run HTTP client
       # You may pin to the exact commit or the version.
       # uses: CamiloGarciaLaRotta/watermelon-http-client@054c532cb02e9bd533ba3579cf03f8c332061713
         uses: CamiloGarciaLaRotta/watermelon-http-client@v1.5
@@ -53,7 +54,7 @@ jobs:
           # variables: # optional, default is {}
           # name of the entrypoint GraphQL operation if multiple are defined in `graphql`
           # operation_name: # optional
-      - name: Labeler
+      - name: Run Labeler
         uses: actions/labeler@v3
         with:
         # The GITHUB_TOKEN secret
@@ -66,4 +67,18 @@ jobs:
         # fail_fast: # optional
         # wether to print info-level statements or not
         # verbose: # optional
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false
 
