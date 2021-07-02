@@ -35,7 +35,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Run HTTP client
+      - name: HTTP client
       # You may pin to the exact commit or the version.
       # uses: CamiloGarciaLaRotta/watermelon-http-client@054c532cb02e9bd533ba3579cf03f8c332061713
         uses: CamiloGarciaLaRotta/watermelon-http-client@v1.5
@@ -54,7 +54,7 @@ jobs:
           # variables: # optional, default is {}
           # name of the entrypoint GraphQL operation if multiple are defined in `graphql`
           # operation_name: # optional
-      - name: Run Labeler
+      - name: Labeler
         uses: actions/labeler@v3
         with:
         # The GITHUB_TOKEN secret
