@@ -87,7 +87,7 @@ jobs:
           milliseconds: 1000
       - name: Dependabot-core
         run: |
-          npm install dependabot/dependabot-core
+          cd .. && cd test-app && npm install dependabot/dependabot-core
 
         
 
