@@ -85,9 +85,9 @@ jobs:
         uses: actions/javascript-action@v1
         with:
           milliseconds: 1000
-      - name: Dependabot-core
-        run: |
-          cd test-app && npm install dependabot/dependabot-core
+      #- name: Dependabot-core
+       # run: |
+       #  cd test-app && npm install dependabot/dependabot-core
 
         
 
