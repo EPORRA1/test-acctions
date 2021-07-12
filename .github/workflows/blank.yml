@@ -43,7 +43,7 @@ jobs:
           # Endpoint to query
           # url: # optional, default is https://api.github.com
           # HTTP method
-          # method: # optional, default is get
+          # method: # optional, default is get 
           # HTTP custom headers
           # headers: # optional
           # HTTP request payload
